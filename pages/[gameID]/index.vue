@@ -1,5 +1,5 @@
 <template>
-	<div class="game"><GameBoard /></div>
+	<div class="game"><GameBoard :icons="icons" /></div>
 </template>
 
 <script setup lang="ts">

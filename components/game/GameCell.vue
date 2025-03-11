@@ -1,17 +1,19 @@
 <template>
-	<button
-		v-if="icon"
-		class="game-cell"
-		:class="{ disabled }"
-		@click="handleDisable"
-	>
-		<img :src="icon.component" class="game-cell__icon" />
-	</button>
+	<ClientOnly>
+		<button
+			v-if="icon"
+			class="game-cell"
+			:class="{ disabled }"
+			@click="handleDisable"
+		>
+			<img :src="icon.component" class="game-cell__icon" /></button
+	></ClientOnly>
 </template>
 
 <script setup lang="ts">
 interface Props {
-	icon: any;
+	// icon: any;
+	icon: { component: string };
 }
 
 defineProps<Props>();
@@ -31,12 +33,11 @@ const handleDisable = () => {
 	&.disabled {
 		@apply pointer-events-none border  border-green-400;
 
-		&:hover {
-			@apply scale-100;
-		}
+		// &:hover {
+		// 	@apply scale-90;
+		// }
 	}
-
-	&:hover {
+	.game-cell:not(.disabled):hover {
 		@apply scale-110;
 	}
 
