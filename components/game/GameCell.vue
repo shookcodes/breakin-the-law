@@ -12,21 +12,29 @@
 </template>
 
 <script setup lang="ts">
+import { currentTurn } from "@/state";
 // import { client } from 'process';
 
 interface Props {
 	// icon: any;
 	icon: { component: string };
 	index: number;
+	isStealCell?: boolean;
 }
 
-defineProps<Props>();
+const { isStealCell } = defineProps<Props>();
 
 const disabled = ref(false);
 
 const handleButtonClick = () => {
-	if (!disabled.value) disabled.value = true;
+	if (!disabled.value && isStealCell) disabled.value = true;
 
+	if (isStealCell) {
+		currentTurn.value = "guess";
+	} else {
+		currentTurn.value = "steal";
+	}
+	return currentTurn.value;
 	// client.
 };
 </script>

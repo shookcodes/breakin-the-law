@@ -1,5 +1,6 @@
 <template>
 	<div class="home">
+		<h1>BREAKIN' THE LAW</h1>
 		<Button
 			v-if="showStartGameButton"
 			text="Start New Game"
