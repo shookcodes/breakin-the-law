@@ -18,19 +18,25 @@ const player1 = ref(false);
 const player2 = ref(false);
 
 const showStartGameButton = ref(true);
+
+const game = ref();
 const handleStartGame = async () => {
 	// console.log("HELLO", worker);
 	// const res = await $fetch("/api/temporal");
 	// console.log("RES", res);
 	// return res;
-	const game = await buildGameObject();
+	game.value = await buildGameObject();
 	console.log("GAME", game);
 
-	router.push(game.gameID.toString());
+	router.push(game.value.gameID.toString());
 
 	player1.value = true;
 };
 
+const handleJoinGame = async () => {
+	router.push(game.value.gameID.toString());
+	player2.value = true;
+};
 watchEffect(() => {
 	if (player1.value) {
 		showStartGameButton.value = false;
@@ -42,8 +48,6 @@ onMounted(async () => {
 
 	console.log("RES", res);
 });
-
-const handleJoinGame = async () => {};
 </script>
 
 <style lang="scss">
