@@ -25,6 +25,8 @@ export async function buildGameObject(): Promise<Game> {
 		player2Guess: [0]
 	};
 
+	console.log("TEST");
+
 	return Game;
 }
 
