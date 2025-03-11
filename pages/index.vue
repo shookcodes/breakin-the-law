@@ -55,6 +55,6 @@ onMounted(async () => {
 
 <style lang="scss">
 .home {
-	@apply flex items-center justify-center gap-6;
+	@apply flex flex-col items-center justify-center gap-6;
 }
 </style>
