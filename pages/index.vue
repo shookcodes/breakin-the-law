@@ -9,6 +9,8 @@ import Button from "~/components/global/Button.vue";
 
 const handleStartGame = async () => {
 	console.log("HELLO");
+
+	//    const game = await buildGameObject()
 };
 
 const handleJoinGame = async () => {};
