@@ -9,7 +9,9 @@
 <script setup lang="ts">
 import GameCell from "~/components/game/GameCell.vue";
 
-interface Props {}
+interface Props {
+	steal: true;
+}
 
 defineProps<Props>();
 

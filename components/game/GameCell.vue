@@ -5,13 +5,15 @@
 			class="game-cell"
 			:class="{ disabled }"
 			:id="index.toString()"
-			@click="handleDisable"
+			@click="handleButtonClick"
 		>
 			<img :src="icon.component" class="game-cell__icon" /></button
 	></ClientOnly>
 </template>
 
 <script setup lang="ts">
+// import { client } from 'process';
+
 interface Props {
 	// icon: any;
 	icon: { component: string };
@@ -22,8 +24,10 @@ defineProps<Props>();
 
 const disabled = ref(false);
 
-const handleDisable = () => {
+const handleButtonClick = () => {
 	if (!disabled.value) disabled.value = true;
+
+	// client.
 };
 </script>
 
