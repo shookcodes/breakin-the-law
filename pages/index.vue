@@ -30,13 +30,13 @@ const handleStartGame = async () => {
 	game.value = await buildGameObject();
 	console.log("GAME", game);
 
-	router.push(`${game.value.gameID.toString()}/player1`);
+	router.push(`${game.value.gameID.toString()}/player/steal`);
 
 	player1.value = true;
 };
 
 const handleJoinGame = async () => {
-	router.push(`${game.value.gameID.toString()}/player2`);
+	router.push(`${game.value.gameID.toString()}/player/steal`);
 	player2.value = true;
 };
 watchEffect(() => {
