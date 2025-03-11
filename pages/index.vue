@@ -8,8 +8,12 @@
 import Button from "~/components/global/Button.vue";
 
 const handleStartGame = async () => {
-	console.log("HELLO");
+	// console.log("HELLO", worker);
+	const res = await $fetch("/api/temporal");
 
+	console.log("RES", res);
+
+	return res;
 	//    const game = await buildGameObject()
 };
 

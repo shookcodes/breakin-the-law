@@ -7,7 +7,8 @@
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
+		"postinstall": "nuxt prepare",
+		"worker:start": "nodemon --exec node --loader ts-node/esm src/worker.ts"
 	},
 	"dependencies": {
 		"@nuxtjs/tailwindcss": "^6.13.2",
@@ -16,8 +17,11 @@
 		"@temporalio/common": "^1.8.6",
 		"@temporalio/worker": "^1.8.6",
 		"@temporalio/workflow": "^1.8.6",
+		"nodemon": "^3.1.9",
 		"nuxt": "^3.16.0",
 		"sass": "^1.85.1",
+		"ts-node": "^10.9.2",
+		"tsc": "^2.0.4",
 		"vue": "^3.5.13",
 		"vue-router": "^4.5.0"
 	}
