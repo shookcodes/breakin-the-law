@@ -6,13 +6,14 @@
 </template>
 <script setup lang="ts">
 import Button from "~/components/global/Button.vue";
-
+import { buildGameObject } from "~/server/src/activities";
 const handleStartGame = async () => {
 	// console.log("HELLO", worker);
 	// const res = await $fetch("/api/temporal");
 	// console.log("RES", res);
 	// return res;
-	//    const game = await buildGameObject()
+	const game = await buildGameObject();
+	console.log("GAME", game);
 };
 
 onMounted(async () => {
