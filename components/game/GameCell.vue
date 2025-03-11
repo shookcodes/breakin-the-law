@@ -22,7 +22,6 @@ const disabled = ref(false);
 
 const handleDisable = () => {
 	if (!disabled.value) disabled.value = true;
-	console.log("HERE", !disabled.value);
 };
 </script>
 

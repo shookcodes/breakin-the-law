@@ -43,3 +43,5 @@ run().catch((err) => {
 	process.exit(1);
 });
 // @@@SNIPEND
+
+export default run;

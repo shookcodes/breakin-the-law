@@ -28,4 +28,4 @@ export async function buildGameObject(): Promise<Game> {
 	return Game;
 }
 
-export default buildGameObject;
+// export default buildGameObject;

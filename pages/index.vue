@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="home">
 		<Button text="Start New Game" @click="handleStartGame" />
 		<Button text="Join Game" @click="handleJoinGame"></Button>
 	</div>
@@ -9,13 +9,23 @@ import Button from "~/components/global/Button.vue";
 
 const handleStartGame = async () => {
 	// console.log("HELLO", worker);
-	const res = await $fetch("/api/temporal");
-
-	console.log("RES", res);
-
-	return res;
+	// const res = await $fetch("/api/temporal");
+	// console.log("RES", res);
+	// return res;
 	//    const game = await buildGameObject()
 };
 
+onMounted(async () => {
+	const res = await $fetch("/api/temporal");
+
+	console.log("RES", res);
+});
+
 const handleJoinGame = async () => {};
 </script>
+
+<style lang="scss">
+.home {
+	@apply flex items-center justify-center gap-6;
+}
+</style>

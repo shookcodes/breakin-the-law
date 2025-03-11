@@ -8,8 +8,6 @@ interface Props {}
 defineProps<Props>();
 
 const icons = await useRandomIcons();
-
-console.log("IC", icons);
 </script>
 
 <style lang="scss">
