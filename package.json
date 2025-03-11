@@ -1,19 +1,24 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.13.2",
-    "nuxt": "^3.16.0",
-    "sass": "^1.85.1",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@nuxtjs/tailwindcss": "^6.13.2",
+		"@temporalio/activity": "^1.8.6",
+		"@temporalio/client": "^1.8.6",
+		"@temporalio/common": "^1.8.6",
+		"@temporalio/worker": "^1.8.6",
+		"@temporalio/workflow": "^1.8.6",
+		"nuxt": "^3.16.0",
+		"sass": "^1.85.1",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0"
+	}
 }
