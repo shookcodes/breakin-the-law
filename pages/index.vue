@@ -9,6 +9,8 @@
 	</div>
 </template>
 <script setup lang="ts">
+import { onMounted, ref, watchEffect } from "vue";
+import { useRouter } from "vue-router";
 import Button from "~/components/global/Button.vue";
 import { buildGameObject } from "~/server/src/activities";
 
@@ -28,13 +30,13 @@ const handleStartGame = async () => {
 	game.value = await buildGameObject();
 	console.log("GAME", game);
 
-	router.push(game.value.gameID.toString());
+	router.push(`${game.value.gameID.toString()}/player1`);
 
 	player1.value = true;
 };
 
 const handleJoinGame = async () => {
-	router.push(game.value.gameID.toString());
+	router.push(`${game.value.gameID.toString()}/player2`);
 	player2.value = true;
 };
 watchEffect(() => {

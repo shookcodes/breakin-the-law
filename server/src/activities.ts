@@ -17,8 +17,8 @@ export async function buildGameObject(): Promise<Game> {
 
 	const Game: Game = {
 		gameID: gameNumber,
-		player1: "",
-		player2: "",
+		player1: "player1",
+		player2: "player2",
 		player1Steal: [0],
 		player2Steal: [0],
 		player1Guess: [0],

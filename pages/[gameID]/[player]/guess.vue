@@ -1,14 +1,16 @@
 <template>
 	<!-- <div class="game"><GameBoard :icons="icons" /></div> -->
-	<div>Player 1</div>
+	<div class="game"><GameBoard :icons="icons" /></div>
 </template>
 
 <script setup lang="ts">
-interface Props {}
+interface Props {
+	icons: any;
+}
 
-defineProps<Props>();
+const { icons } = defineProps<Props>();
 
-const icons = await useRandomIcons();
+// const icons = await useRandomIcons();
 
 console.log("IC", icons);
 </script>
