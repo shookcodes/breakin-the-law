@@ -17,4 +17,8 @@ interface Props {
 defineProps<Props>();
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.btn {
+	@apply border-2 border-pink-400 bg-pink-200 rounded;
+}
+</style>
