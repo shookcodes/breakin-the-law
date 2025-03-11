@@ -4,6 +4,7 @@
 			v-if="icon"
 			class="game-cell"
 			:class="{ disabled }"
+			:id="index.toString()"
 			@click="handleDisable"
 		>
 			<img :src="icon.component" class="game-cell__icon" /></button
@@ -14,6 +15,7 @@
 interface Props {
 	// icon: any;
 	icon: { component: string };
+	index: number;
 }
 
 defineProps<Props>();

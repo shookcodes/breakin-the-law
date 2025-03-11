@@ -1,7 +1,7 @@
 <template>
 	<div class="game-board" v-if="icons.length">
-		<div v-for="icon in icons" :key="icon.path" class="game-cell">
-			<GameCell v-if="icon" :icon="icon" />
+		<div v-for="(icon, index) in icons" :key="icon.path" class="game-cell">
+			<GameCell v-if="icon" :icon="icon" :index="index" />
 		</div>
 	</div>
 </template>
