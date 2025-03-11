@@ -28,4 +28,18 @@ export async function buildGameObject(): Promise<Game> {
 	return Game;
 }
 
-// export default buildGameObject;
+// export default addPlayer1Guess(guess: Number): Promise<Game>{
+// 		Game.player1Guess = Game.player1Guess.concat([guess]);
+// };
+
+// export default addPlayer2Guess(guess: Number): Promise<Game>{
+// 		Game.player2Guess = Game.player2Guess.concat([guess]);
+// };
+
+// export default addPlayer1Steal(steal: Number): Promise<Game>{
+// 		Game.player1Steal = Game.player1Steal.concat([steal]);
+// };
+
+// export default addPlayer2Steal(steal: Number): Promise<Game>{
+// 		Game.player2Steal = Game.player2Steal.concat([steal]);
+// };
